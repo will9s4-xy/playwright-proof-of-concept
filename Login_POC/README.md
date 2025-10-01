@@ -6,3 +6,5 @@
 - Page Object classes have been created for base page and Login respectivly 
 - Created an exmaple test script that tests successful login
 - Created a configuration file so the BaseURL is not being hardcoded and can be called at anytime 
+- Working on ivalid password testing for that test case 
+- Created wrong email aand wrrong password

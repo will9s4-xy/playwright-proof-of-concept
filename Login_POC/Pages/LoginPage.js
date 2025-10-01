@@ -7,19 +7,20 @@ class LoginPage extends BasePage {
         this.usernameInput = '#user-name';
         this.passwordInput = '#password';
         this.loginbtn = '#login-button';
-        this.errorText = '[data-test = "error"]';
+ 
+
     }
     async open(){
         await this.goto();
     }
+    async login(user, pass){
 
-    async login(username, password){
-        await this.page.fill(this.usernameInput, username);
-        await this.page.fill(this.passwordInput, password);
+        if (typeof user !== 'string' || typeof pass !== 'string'){
+            throw new Error ('Login called with invalid args: user= ${user}, pass= ${pass} ');
+        }
+        await this.page.fill(this.usernameInput, user);
+        await this.page.fill(this.passwordInput, pass);
         await this.page.click(this.loginbtn);
-    }
-    async getErrorMessage(){
-        return await this.page.textContent(this.errorText);
     }
 }
 module.exports = {LoginPage};

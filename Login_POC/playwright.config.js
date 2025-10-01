@@ -2,10 +2,9 @@
  *  @Type (import('@playwright/Test').PlaywrightTestConfig)
 */ 
 const config= {
-    TestDir:  './Tests',
-    Testmatch: ['**/*.spec.js', '**/*.test.js' ], 
+
     Timeout: 30 * 1000,
-    retries: 2,
+    //retries: 2,
 
     reporter: [
         ['list'],
