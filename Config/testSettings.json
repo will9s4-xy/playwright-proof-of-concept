@@ -1,0 +1,12 @@
+{
+  "environment": "qa",
+  "urls": {
+    "baseUrl": "https://www.saucedemo.com/"
+  },
+  "browser": {
+    "headless": false,
+    "slowMo": 50,
+    "viewportWidth": 1280,
+    "viewportHeight": 720
+  }
+}
